@@ -1,7 +1,9 @@
-document.querySelector('.menu .mobile').addEventListener('click',()=>{
-   if(document.querySelector('nav').style.display == 'flex'){
-      document.querySelector('nav').style.display = 'none'
+let nav = document.querySelector('nav');
+
+function menuShow(){
+   if(nav.style.display == 'none'){
+      nav.style.display = 'block'
    }else{
-      document.querySelector("nav").style.display = 'flex';
+      nav.style.display ='none'
    }
-})
+};
