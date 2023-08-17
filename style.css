@@ -475,31 +475,24 @@ li.active a{
 
 
 
-.clients-area{
-    overflow: hidden; 
-    max-width: 100vw;
-}
-
 .clients-area .sliders{ 
     width: 1000vw; 
     height: 100%; 
-    display: flex; 
+    display: flex;
 }
 
-
 .clients-area .slider{
-    
     width: 100vw; 
     height: 100%;
 }
 
 .clients-area .slider_area{
+    max-width: 1150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    margin-left: -200px;
     font-size: 30px;
 }
 
@@ -533,6 +526,7 @@ li.active a{
     color: #777;
     text-align: center;
     line-height: 18px;
+    text-align: justify;
 
 }
 
@@ -856,15 +850,9 @@ li.active a{
 
 .name-email-area{
     display: flex;
+    justify-content: space-between;
     margin-top: 25px;
 }
-
-.name-email-area .email{
-    margin-left: 50px;
-}
-
-
-
 
 .subject,
 .message{
@@ -919,7 +907,6 @@ li.active a{
     display: flex;
     margin: auto;
     width: 1140px;
-    
 }
 
 .mapa-left{
@@ -1139,12 +1126,13 @@ footer.dark{
     }
     .section-team{
         max-width: 600px;
-        margin: 0;
-        margin-left: 90px;
+        margin-left: 50px;
     }
 
     .clients-area {
-        margin-left: 90px;
+        max-width: 600px;
+        overflow: hidden;
+
 }
     .clients-area-desc{
         width: 500px;
@@ -1152,8 +1140,6 @@ footer.dark{
     }
 
     .patrocinio {
-        margin-left: 50px;
-        width: 300px;
     }
     .price-area{
         flex-wrap: wrap;
@@ -1174,7 +1160,7 @@ footer.dark{
         height: 200px;
     }
     .contact-area{
-        margin-left: 150px;
+        
     }
 
     .mapa-opacity{
@@ -1199,6 +1185,189 @@ footer.dark{
         
     }
 
-
 }
 
+/*Responsive cel */
+
+@media (max-width:450px){
+
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0,0,0,0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        
+    }
+
+    .menu ul ,
+    .menu li {
+        flex-direction: column;
+    }
+
+    .menu li  a {
+        font-weight: bold;
+        height: 60px;
+        font-size: 20px;
+        margin-left: 30px;
+        border: 0;        
+    }
+
+    .menu li.active {
+        border:0;
+    }
+
+    .logo{
+        margin-left: 20px;
+    }
+    .menu-tablet{
+        display: block;
+        width: 60px;
+        margin-right: 20px;
+    }
+
+    .banner .slider_area {
+        font-size: 20px;
+
+    }
+    .banner span{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .section-body-aboutus{
+       flex-direction: column;
+
+    }
+
+    .section-body-left {
+       max-width: 350px;
+       padding: 30px;
+       margin-bottom: 50px;
+       overflow: hidden;
+       text-align: justify;
+    }
+
+    .section-body-left a{
+        margin-left:  60px;
+    }
+    .section-body-right img{
+        width: 200px;
+        margin-left: 80px;
+    }
+
+    .section-services {
+        flex-wrap: wrap;
+    }
+
+    .section-service {
+        min-width: 50vw;
+        margin-bottom: 80px;
+    }
+
+    .section-icons{
+        font-size: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-team{
+        max-width: 280px;
+        margin-left: 50px;
+        overflow-x: hidden;
+
+    }
+
+    .clients-area {
+        max-width: 300px;
+        overflow-x: hidden;
+
+    }
+    .clients-area-desc{
+        width: 330px;
+        text-align: justify;
+    }
+
+    .patrocinio  {
+        width: 450px;
+        overflow-x: hidden;
+    }
+    .patrocinio img {
+        width: 50px;
+    }
+    .price-area{
+        flex-wrap: wrap;
+    }
+
+    .slider-book{
+        flex-direction: column;
+    }
+    .section-body-left-book{
+        margin-bottom: 50px;
+    }
+    .section-body-right-book{
+        max-width: 400px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+
+    .section-facts{
+        flex-direction: column;
+    }
+    .section-fact{
+        font-size:10px;
+        height: 150px;
+        margin-left: 60px;
+    }
+
+    .tell-about-us-area{
+        width: 430px;
+        overflow-x: hidden;
+    }
+    .tell-about-us-area .shared{
+        display: none;
+    }
+    .contact-area{
+        width: 430px;
+        overflow-x: hidden;
+        margin: 10px;
+        font-size: 9px;
+    }
+    .name-email-area{
+        display: flex;
+        
+    }
+
+    .mapa-left{
+        width: 280px;
+        overflow-x: hidden;
+    }
+    .mapa-right img{
+        width: 50px;
+    }
+
+    .dark{
+        flex-direction: column;
+        flex-direction:column-revers;
+    }
+
+    .dark-area{
+        margin-left: 750px;
+    }
+
+    .dark-txt{
+        width: 350px;
+        font-size: 12px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    .dark-input{
+        padding: 50px;
+        
+    }
+
+}
